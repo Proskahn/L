@@ -32,7 +32,7 @@ layout: default
         <!-- Home Post List -->
         {% for post in site.posts limit : 5 %}
 
-        <!-- <article class="post-preview">
+        <article class="post-preview">
           <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/' }}">
             <h2 class="post-title">{{ post.title }}</h2>
             {% if post.subtitle %}
@@ -51,17 +51,6 @@ layout: default
             {{ post.date | date: '%B %d, %Y' }} &middot; {% include read_time.html content=post.content %}            
           </p>
         </article>
-
-        <hr> -->
-        <div class="post-content">
-          <h1>
-            {{ post.title }}
-          </h1>
-          {% if page.image %}
-            <div class="featured-image">
-              <img src="{{page.image}}">
-            </div>
-          {% endif %}
 
         {% endfor %}
 
